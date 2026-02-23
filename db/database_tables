@@ -1,0 +1,57 @@
+-- إنشاء قاعدة البيانات
+CREATE DATABASE IF NOT EXISTS DB_banksystemone1;
+
+USE DB_banksystemone1;
+
+-- جدول المستخدمين
+CREATE TABLE IF NOT EXISTS users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100) UNIQUE,
+    role ENUM('admin','user') NOT NULL,
+    status ENUM('active','inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- جدول الحسابات البنكية
+CREATE TABLE IF NOT EXISTS accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    account_type ENUM('saving','checking') NOT NULL,
+    account_number VARCHAR(20) NOT NULL UNIQUE,
+    balance DECIMAL(15,2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    transaction_limit DECIMAL(15,2) DEFAULT 2000.00,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- جدول الحركات المالية
+CREATE TABLE IF NOT EXISTS transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT NOT NULL,
+    from_account_id INT NULL,
+    to_account_id INT NULL,
+    type ENUM('deposit','withdraw','transfer') NOT NULL,
+    amount DECIMAL(15,2) NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    description TEXT,
+    FOREIGN KEY (account_id) REFERENCES accounts(account_id) ON DELETE CASCADE,
+    FOREIGN KEY (from_account_id) REFERENCES accounts(account_id) ON DELETE SET NULL,
+    FOREIGN KEY (to_account_id) REFERENCES accounts(account_id) ON DELETE SET NULL
+);
+
+ALTER TABLE users
+MODIFY role ENUM('admin','user') NOT NULL;
+INSERT INTO users
+(username, password, first_name, last_name, email, role, status)
+VALUES
+('admin', '1234', 'System', 'Admin', 'admin@system.com', 'admin', 'active');
+
+
+SELECT * FROM users WHERE user_id = 1;
+
+-- select *from   Transactions
+

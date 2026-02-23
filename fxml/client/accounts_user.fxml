@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" stylesheets="@../../style_css/profile.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.accounts_user">
+   <children>
+      <Text layoutX="185.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheicking Account">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="10.0" layoutY="64.0" prefHeight="238.0" prefWidth="350.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;" AnchorPane.topAnchor="64.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number" wrappingWidth="113.13671875">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="2342 3654">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions limit">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="\$ 2000">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date created">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="12/7/2025">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="\$23421">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Text layoutX="185.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving Account">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Text>
+      <VBox layoutX="10.0" layoutY="375.0" prefHeight="238.0" prefWidth="350.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number" wrappingWidth="113.13671875">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="2342 3654">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Withdraw limit">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="\$ 2000">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date created">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="12/7/2025">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label text="\$23421">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Text layoutX="466.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move founs to save account">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="496.0" layoutY="112.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;" stylesheets="@../../style_css/profile.css" text="transfer">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/arrow_cool_down_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Text layoutX="467.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move founs to save account">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="498.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;" text="transfer">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/arrow_warm_up_22dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField layoutX="468.0" layoutY="72.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextField layoutX="471.0" layoutY="396.0" prefHeight="25.0" prefWidth="216.0" />
+   </children>
+   <styleClass>
+      <String fx:value="btn-outline" />
+      <String fx:value="subheader" />
+      <String fx:value="success" />
+      <String fx:value="text-field" />
+   </styleClass>
+</AnchorPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="627.0" style="-fx-background-radius: 50 50 50 50;" stylesheets="@../../style_css/profile.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.logincontrollor_base">
+   <children>
+      <AnchorPane layoutX="240.0" layoutY="-7.0" prefHeight="592.0" prefWidth="392.0" style="-fx-background-color: white; -fx-background-radius: 50 0 50 0;" stylesheets="@../../style_css/profile.css">
+         <children>
+            <TextField fx:id="usernameField" layoutX="117.0" layoutY="175.0" promptText="email" style="-fx-background-color: transpan; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+            <Button layoutX="144.0" layoutY="354.0" mnemonicParsing="false" onAction="#d_ad" prefHeight="28.0" prefWidth="105.0" style="-fx-background-color: #0598ff; -fx-background-radius: 10;" text="login">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="60.0" layoutX="47.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/image/manage_accounts_24dp_0598FF_FILL0_wght400_GRAD0_opsz24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="60.0" layoutX="53.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" rotate="31.0">
+               <image>
+                  <Image url="@/image/key.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="149.0" layoutX="163.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: #0598ff;" AnchorPane.rightAnchor="137.0">
+               <image>
+                  <Image url="@../../image/account_child_invert_150dp_0598FF_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="130.0" layoutY="112.0" prefHeight="36.0" prefWidth="125.0" />
+            <Text fill="#0598ff" layoutX="116.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="selecte login" wrappingWidth="160.0">
+               <font>
+                  <Font name="Cambria Bold" size="27.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="passwordField" layoutX="114.0" layoutY="262.0" promptText="password " style="-fx-background-color: transpan; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label fx:id="errorLabel1" layoutX="140.0" layoutY="223.0" textFill="#e41111" />
+            <Label fx:id="errorLabel2" layoutX="144.0" layoutY="307.0" textFill="#e41111" />
+            <Button layoutX="140.0" layoutY="461.0" mnemonicParsing="false" onAction="#register" prefHeight="28.0" prefWidth="117.0" stylesheets="@../../style_css/profile.css" text="register">
+               <styleClass>
+                  <String fx:value="btn-ghost" />
+                  <String fx:value="btn-outline" />
+                  <String fx:value="btn-primary" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="btn-primary" />
+            <String fx:value="btn-outline" />
+            <String fx:value="btn-primary" />
+            <String fx:value="button" />
+            <String fx:value="combo-box" />
+            <String fx:value="v-center" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane prefHeight="585.0" prefWidth="240.0" style="-fx-background-color: #0598ff; -fx-background-radius: 0 0 88 88;">
+         <children>
+            <Text fill="WHITE" layoutX="35.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome my app">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="40.0" layoutY="233.0" prefHeight="119.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-background-radius: 12;">
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="86.0" layoutX="9.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="20.0">
+                     <image>
+                        <Image url="@../../image/account_balance_172dp_0598FF_FILL0_wght400_GRAD0_opsz48.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <RadioButton fx:id="adminRadio" layoutX="61.0" layoutY="68.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="117.0" text="admin" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="userRadio" layoutX="61.0" layoutY="100.0" mnemonicParsing="false" text="user" textFill="WHITE" toggleGroup="$roleGroup">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="errorLabel" layoutX="33.0" layoutY="159.0" prefHeight="17.0" prefWidth="170.0" textFill="#ee1212">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

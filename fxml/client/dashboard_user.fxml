@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="900.0" stylesheets="@../../style_css/profile.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.dashboardcontroller_user">
+    <children>
+        <Label fx:id="date_lab" layoutX="597.0" layoutY="51.0" prefHeight="17.0" prefWidth="124.0" textFill="#28392b" AnchorPane.leftAnchor="597.0">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Label>
+        <Text layoutX="634.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #28392b;" text="Accounts Summary">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="29.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #28392b;" text="MY Accounts">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <HBox layoutX="29.0" layoutY="168.0" prefHeight="181.0" prefWidth="547.0" stylesheets="@../../style_css/profile.css">
+            <children>
+                <AnchorPane prefHeight="181.0" prefWidth="308.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;">
+                    <children>
+                        <VBox layoutX="205.0" prefHeight="163.0" prefWidth="47.0" style="-fx-background-color: #ffffff;" />
+                        <Label fx:id="checkingaccount_lab" layoutX="14.0" layoutY="36.0" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="108.0" text="**** **** ****" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="checkingstaraccount_lab" layoutX="113.0" layoutY="108.0" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="132.0" style="-fx-text-fill: #ffffff;" text="Checking Account">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="-25.0" />
+                    </padding>
+                </AnchorPane>
+                <AnchorPane prefHeight="62.0" prefWidth="141.0" />
+                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="181.0" prefWidth="161.0" style="-fx-background-color: #0598ff; -fx-background-radius: 12;">
+                    <children>
+                        <VBox layoutX="205.0" prefHeight="163.0" prefWidth="0.0" style="-fx-background-color: #ffffff;" />
+                        <Label fx:id="savingsaccount_lab" layoutX="14.0" layoutY="36.0" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="108.0" text="**** **** ****" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="savingsstar_lab" layoutX="113.0" layoutY="108.0" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="132.0" text="Savings Account" textFill="#070606">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="-200.0" right="-40.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </AnchorPane>
+            </children>
+        </HBox>
+        <VBox layoutX="538.0" layoutY="168.0" prefHeight="171.0" prefWidth="204.0" stylesheets="@../../style_css/profile.css">
+            <children>
+                <VBox prefHeight="156.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" stylesheets="@../../style_css/profile.css">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #21a42a;" text="Income">
+                            <VBox.margin>
+                                <Insets left="30.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Candara Bold" size="18.0" />
+                            </font>
+                        </Text>
+                        <Label fx:id="income_lab" text="+ $ 2402" textFill="#21a42a">
+                            <VBox.margin>
+                                <Insets bottom="40.0" left="30.0" right="50.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Line endX="100.0" startX="-100.0" stroke="#21a42a" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #a41b1b;" text="Expances">
+                            <VBox.margin>
+                                <Insets bottom="15.0" left="30.0" top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Text>
+                        <Label fx:id="expances_lab" prefHeight="17.0" prefWidth="68.0" stylesheets="@../../style_css/profile.css" text="- $ 1232" textFill="#a41b1b">
+                            <VBox.margin>
+                                <Insets left="30.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <Text layoutX="638.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #28392b;" text="Send Maney">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="13.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #28392b;" text="Latest Transactions">
+            <font>
+                <Font name="Calibri Bold" size="14.0" />
+            </font>
+        </Text>
+        <ListView fx:id="transaction_list" layoutX="14.0" layoutY="379.0" prefHeight="261.0" prefWidth="502.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../Pictures/project%20java/banksystemone/src/style_css/profile.css">
+         <styleClass>
+            <String fx:value="list-cell" />
+            <String fx:value="list-view" />
+         </styleClass></ListView>
+        <VBox layoutX="538.0" layoutY="365.0" prefHeight="313.0" prefWidth="204.0" stylesheets="@../../style_css/profile.css" AnchorPane.bottomAnchor="-16.0">
+            <children>
+                <Label style="-fx-text-fill: #28392b;" text="Email address :" />
+                <TextField fx:id="email_lab" />
+                <Label style="-fx-text-fill: #28392b;" text="Ammount Money :" />
+                <TextField fx:id="ammount_lab" />
+                <Label style="-fx-text-fill: #28392b;" text="Message :" />
+                <TextArea fx:id="message_lab" prefHeight="200.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="70.0" top="20.0" />
+                    </VBox.margin>
+                </TextArea>
+                <Button fx:id="send_btn" mnemonicParsing="false" onAction="#sendMoney" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #0598ff;" stylesheets="@../../style_css/profile.css" text="send money">
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="-60.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+      <Label fx:id="WelcomeMessage" layoutX="268.0" layoutY="60.0" prefHeight="36.0" prefWidth="201.0" stylesheets="@../../../../../Pictures/project%20java/banksystemone/src/style_css/profile.css">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="form-label" />
+            <String fx:value="label" />
+         </styleClass>
+      </Label>
+    </children>
+</AnchorPane>

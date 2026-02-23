@@ -1,0 +1,229 @@
+/* ---------- Colors ---------- */
+
+/* ---------- Root Layout ---------- */
+/* تنسيق وعاء الأزرار (VBox أو Sidebar) */
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #eeeeee;
+    -fx-border-width: 0 1 0 0; /* خط خفيف جهة اليمين فقط */
+}
+
+/* التنسيق العام لكل زر في القائمة */
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-background-radius: 0 25 25 0; /* حواف دائرية جهة اليمين فقط */
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 4; /* مكان المؤشر (Indicator) */
+}
+
+/* تأثير عند مرور الماوس (Hover) */
+.sidebar-btn:hover {
+    -fx-background-color: #f0f7ff; /* لون أزرق باهت جداً */
+    -fx-text-fill: #2196f3; /* تغيير النص للأزرق */
+    -fx-border-color: #2196f3; /* إظهار الخط الأزرق على اليسار */
+}
+
+/* حالة الزر المختار حالياً (Active) */
+.sidebar-btn-active {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #1976d2;
+    -fx-font-weight: bold;
+    -fx-border-color: #1976d2;
+}
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ffffff, #f7fbff);
+    -fx-text-fill: #0b2b4a;
+}
+
+/* ---------- Panels ---------- */
+.primary-panel {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0598FF 0%, derive(#0598FF, -10%) 100%);
+    -fx-background-radius: 0 12 12 0;
+    -fx-padding: 18 12 18 12;
+    -fx-effect: dropshadow(gaussian, rgba(5,152,255,0.12), 6, 0, 0, 3);
+}
+/* زرار عادي */
+.zoom-button {
+    -fx-background-color: #0598ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 14 8 14;
+    -fx-cursor: hand;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-transition: all 200ms ease-in-out; /* ملاحظة: غير مدعوم بالكامل في JavaFX */
+}
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 10;
+}
+
+.list-cell:selected {
+    -fx-background-color: transparent; /* بنلغي اللون الأزرق المزعج عند الاختيار */
+}
+
+.list-cell:selected .hbox {
+    -fx-border-color: #0598ff; /* بنخلي المربع نفسه هو اللي يتحدد بلون أزرق خفيف */
+    -fx-border-width: 2;
+}
+/* عند الضغط */
+.zoom-button:pressed {
+    -fx-scale-x: 1.2;  /* تكبير العرض */
+    -fx-scale-y: 1.2;  /* تكبير الطول */
+}
+
+/* عند التركيز (مثلاً بالكيبورد أو الماوس) */
+.zoom-button:focused {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 4);
+}
+
+/* ---------- Headings & Labels ---------- */
+.header {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0598FF;
+}
+
+.subheader {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #0b2b4a;
+}
+
+.muted {
+    -fx-text-fill: rgba(11,43,74,0.6);
+    -fx-font-size: 12px;
+}
+
+.small-accent {
+    -fx-text-fill: #0598FF;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    -fx-background-color: linear-gradient(#0598FF, derive(#0598FF, -12%));
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 14 8 14;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(5,152,255,0.18), 8, 0, 0, 3);
+    -fx-border-color: transparent;
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(derive(#0598FF, 6%), derive(#0598FF, -18%));
+    -fx-effect: dropshadow(gaussian, rgba(5,152,255,0.22), 10, 0, 0, 4);
+}
+
+.btn-primary:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(5,152,255,0.12), 6, 0, 0, 2);
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #0598FF;
+    -fx-text-fill: #0598FF;
+    -fx-border-width: 1.5;
+    -fx-background-radius: 8;
+    -fx-padding: 7 12 7 12;
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(5,152,255,0.06);
+}
+
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(11,43,74,0.9);
+}
+
+.button:disabled {
+    -fx-opacity: 0.55;
+    -fx-cursor: default;
+}
+
+/* ---------- Inputs ---------- */
+.text-field, .password-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: rgba(11,43,74,0.12);
+    -fx-border-radius: 8;
+    -fx-padding: 8 10 8 10;
+    -fx-prompt-text-fill: rgba(11,43,74,0.45);
+    -fx-focus-color: #0598FF;
+    -fx-faint-focus-color: rgba(5,152,255,0.2);
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #0598FF;
+    -fx-effect: dropshadow(gaussian, rgba(5,152,255,0.12), 6, 0, 0, 2);
+}
+
+/* ---------- Tables & Lists ---------- */
+.table-view, .list-view {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: white;
+    -fx-padding: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(#f8fbff, #f3f9ff);
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: 600;
+    -fx-text-fill: #0b2b4a;
+}
+
+.table-row-cell:selected, .list-cell:selected {
+    -fx-background-color: rgba(5,152,255,0.12);
+    -fx-text-fill: #0b2b4a;
+}
+
+/* ---------- Misc ---------- */
+.link {
+    -fx-text-fill: #0598FF;
+    -fx-underline: true;
+}
+
+.divider {
+    -fx-background-color: rgba(11,43,74,0.06);
+    -fx-pref-height: 1;
+}
+
+.tool-tip {
+    -fx-background-color: #0b2b4a;
+    -fx-text-fill: white;
+    -fx-padding: 6 8 6 8;
+    -fx-background-radius: 6;
+}
+
+.container-compact {
+    -fx-padding: 8;
+}
+
+.spacing-8 { -fx-spacing: 8; }
+.spacing-12 { -fx-spacing: 12; }
+.h-center { -fx-alignment: center; }
+.v-center { -fx-alignment: center-left; }
